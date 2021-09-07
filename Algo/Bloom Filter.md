@@ -1,6 +1,34 @@
+# My understanding
+## basic function
+a space-efficient probabilistic data structure. in other words, a query returns either "possibly in set" or "definitely not in set"
 
+Big bitArray + Several Hash func, Hash Funcs map value to several bits (set 1, same num as funcs) in Big bitArray
+if one of query target map bits is not One in bitArray, that means not in Set.
+If all of query target map bit are ONE in bitArray, that means MAYBE in set.
 
-位数组+ some hash funcs, 不会漏判，但是有一定的误判率（哈希表是精确匹配）
+Pros: Save mem,  usually ==never return a false negative==
+Cons: ==Maybe False positive==.
+
+## scenario
+Check whether in a Set,  if false positive, Not too damage 
+spam filter, cache filter, 
+## balance
+the more items added, the larger the probability of false positives.
+ fewer than 10 bits per element are required for a 1% false positive probability
+ 
+## comparing to other solution
+1. URL->MD5/SHA-1->Set/HashMap
+2. Bit-Map, setup BitSet，URL->Hash func->Bit
+
+1. URL compressed to 128Bit(MD5) or 160Bit(SHA-1), Saved Mem, But still linear increase mem usage.
+2. Save more mem,  but Large Data + Single Hash Func may cause high rate collision.
+
+## Tuning on Bloom Filter
+-   _m =_ number of bits in a Bloom filter
+-   _n =_ number of elements to insert
+-   _k =_ number of hash functions
+so,  ==accuracy positive correlation with m/n,  and k==
+
 
 ---
 

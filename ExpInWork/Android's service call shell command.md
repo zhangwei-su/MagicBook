@@ -2,7 +2,7 @@ In Short
 
 > Code related to service call command are just the arguments of the function and order at which the function occur in the aidl file of that service.Here is a syntax
 > 
-> service call <your_service_name> <number at which the function appears in your_service_name.aidl> <type of the argument like i32 or i64> <argument>
+> service call <your_service_name> \<number at which the function appears in your_service_name.aidl> <type of the argument like i32 or i64> \<argument>
 
 In Detail
 
@@ -55,9 +55,9 @@ Here is what you will get -
 .
 ```
 As I am interested in clipboard service, here is how it look
-```
+
 70 clipboard: [android.content.IClipboard]
-```
+
 So from here we can summarise that the service name is clipboard service and the package path is android.content.IClipboard
 
 Then you need to know the complete path where the IClipboard.aidl is.
