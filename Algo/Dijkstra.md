@@ -106,3 +106,5 @@ int[] dijkstra(int start, List<Integer>[] graph) {
 **因为 Dijkstra 计算最短路径的正确性依赖一个前提：路径中每增加一条边，路径的总权重就会增加**。
 
 https://labuladong.gitee.io/algo
+
+
