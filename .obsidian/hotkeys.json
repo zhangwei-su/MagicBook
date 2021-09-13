@@ -2,17 +2,9 @@
   "obsidian-git:push": [
     {
       "modifiers": [
-        "Shift"
+        "Alt"
       ],
       "key": "V"
-    }
-  ],
-  "obsidian-git:pull": [
-    {
-      "modifiers": [
-        "Shift"
-      ],
-      "key": "P"
     }
   ]
 }
