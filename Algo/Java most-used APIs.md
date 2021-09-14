@@ -53,7 +53,7 @@ Collections.max(list)
 ArrayList<int[]>[] adj = new ArrayList[n]; //int[] is edge, [v,w]
 for (int i=0; i<n; i++) adj[i] = new ArrayList<>();
 ```
-## Array
+## Arrays
 ```java
 Arrays.asList(array) //(not work for Integer/int)
 Arrays.toString(array)
@@ -64,6 +64,12 @@ return new int[]{0,0};
 int[] dir = {0,1,0,-1,0};
 Collections.max(Arrays.asList(array))
 ```
+```java
+int[] test = new int[]{1 2 3 4 5 5 5 6 7 9};
+Arrays.binarySearch(test, 8) = -10 //(-(insertion point) - 1)
+//first element greater than the key, insertion=-(-10+1) = 9;
+```
+
 ## Integer/ double
 ```java
 Integer.MAX_VALUE //2^31-1 = 2,147,483,647 (or hexadecimal 0x7FFFFFFF)
@@ -86,4 +92,16 @@ E ceiling(E e)/ceilingKey min(>=)
 getFirst()/firstKey
 getLast()/lastKey
 remove(object e)
+```
+```java
+int[] test = new int[]{1,2,3,4,5,5,5,6,7,9};
+TreeSet<Integer> tSet = new TreeSet<>();
+for (int i:test) tSet.add(i);
+System.out.println("tSet.size()=" + tSet.size());//8:1,2,3,4,5,6,7,9
+//Floor: Greatest number <= target
+System.out.println("floor(8)=" + tSet.floor(8)); //7
+System.out.println("floor(5)=" + tSet.floor(5)); //5
+//Ceiling:least number >= target
+System.out.println("ceiling(8)=" + tSet.ceiling(8)); //9
+System.out.println("ceiling(5)=" + tSet.ceiling(5)); //5
 ```
