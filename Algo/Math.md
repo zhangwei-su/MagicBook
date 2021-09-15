@@ -34,6 +34,7 @@ for (i = k; stream != null; i++) {  
     if (p < k) reservoir[p] = stream[i];  
 return reservoir;
 ```
+[https://leetcode.com/discuss/interview-question/451431/Facebook-or-Onsite-or-Generate-random-max-index](https://leetcode.com/discuss/interview-question/451431/Facebook-or-Onsite-or-Generate-random-max-index)
 
 ## Random func from existing API
 ```
@@ -45,15 +46,23 @@ int p = (int)(Math.random()*n);
 
 if (p==0) update ret; //1/n chance
 ```
+指数扩大，“拒绝采样”修剪，倍数缩小
+
+rand7->rand10 int rand10() { while (true) { int num = (rand7() - 1) * 7 + rand7(); //1~49 if (num <= 40) return num % 10 + 1; } }
 
 # Log
 ## 换底公式
 ```java
-public static double getRightMostUnsetBit(int n){
-	if(n==1) return -1;
-
-	return Math.log(~n & (n+1))/Math.log(2);  
+public static int getRightMostUnsetBit(int n){
+        return (int)(Math.log(~n & (n+1))/Math.log(2)); 
 	//换底公式: 2^X=~n&(n+1) => X=log(~n&(n+1)) [2 base] = Math.log(~n & (n+1))/Math.log(2) [e base]
 
 }
+System.out.println(getRightMostUnsetBit(1));//1
+System.out.println(getRightMostUnsetBit(3));//2
+System.out.println(getRightMostUnsetBit(7));//3
+System.out.println(getRightMostUnsetBit(6));//0
 ```
+
+# other
+Quick switch 0<->1 : 1-a
