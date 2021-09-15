@@ -16,6 +16,7 @@ toArray(T[] a)
 ```
 
 ## PriorityQueue
+Base on Heap
 ```java
 PriorityQueue minHeap = new PriorityQueue<Pair>((a,b)->a.first - b.first);
 add(E)
@@ -27,6 +28,7 @@ E peek()
 ```
 
 ## ArrayDeque / LinkedList
+Base on bidirectional linked list
 ```java
 addFirst(e)
 addLast(e)
@@ -86,6 +88,8 @@ substring(int beginIndex, int endIndex)
 new StringBuilder(str2).reverse().toString();
 ```
 ## TreeSet/TreeMap
+self-balancing binary search tree, more specifically a Red-Black tree
+
 ```java
 E floor(E e)/floorKey max(<=)
 E ceiling(E e)/ceilingKey min(>=)
