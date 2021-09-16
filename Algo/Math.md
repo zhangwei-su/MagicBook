@@ -5,6 +5,11 @@
 - double floor (double a)//largest double value that less than or equal to the argument and is equal to a mathematical integer
 - double ceil (double a)// the smallest double value that is greater than or equal to the argument and is equal to a mathematical integer.
 
+# Combination Permutation
+组合数计算（小于:res += right - left)
+
+组合数计算(等于：n!/m!(n-m)!)
+
 # Geometry
 ## Manhattan Distance
 where distance(p1, p2) = |p2.x - p1.x| + |p2.y - p1.y|
@@ -64,6 +69,12 @@ void RandomShuffle(int a[], int n){
 } // int rand = (int)(Math.random() * range) + min;
 ```
 
+## Random Pick
+权重数组的累加和数组+BinarySearch
+[[528 Random Pick with Weigh]]
+
+blacklist mapping
+[[710 Random Pick with Blacklist]]
 # Log
 ## 换底公式
 ```java
@@ -82,3 +93,6 @@ System.out.println(getRightMostUnsetBit(6));//0
 Quick switch 0<->1 : 1-a
 Any equation need be changed to better one.
 [[LC1499 Max Value of Equation]]
+
+Mod, reminder, negative
+[[SubArray_Subsequence#Negative allowed]]

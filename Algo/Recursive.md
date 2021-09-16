@@ -27,6 +27,8 @@ def backtrack(路径, 选择列表):
 
 符合回溯框架，而且时间复杂度都不可能低于 O(N!)，因为穷举整棵决策树是无法避免的。**这也是回溯算法的一个特点，不像动态规划存在重叠子问题可以优化，回溯算法就是纯暴力穷举，复杂度一般都很高**。
 
+# Combination Permutation
+[[Combination Permutation]]
 # Tree
 ## lowest common ancestor
 LCA
