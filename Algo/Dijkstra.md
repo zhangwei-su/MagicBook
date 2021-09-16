@@ -56,10 +56,16 @@ void dijkstra(int n, List<int[]>[] adj, int[] dist, int src) { //O(VlogV)
 
 所以本文实现的 Dijkstra 算法复杂度并不是理想情况下的O(ElogV)，而是O(ElogE)，可能会略大一些，因为图中边的条数一般是大于节点的个数的。
 
-## No negative Weight + DAG
+## No negative Weight
 **因为 Dijkstra 计算最短路径的正确性依赖一个前提：路径中每增加一条边，路径的总权重就会增加**。
+Dijkstra O(ElogE) 只能解决==没有负权重边的图的单源最短路径问题==
 
+Dijkstra算法是贪心，依据“没有负权重边”的特性，进行优化的BFS。它使用MinHeap做Queue，所以总是优先扩展当前cost最小的路径。由于“没有负权重边”，当前cost最小的路径一定是源点到这个末端Node的cost最小的路径，这样在这个Node上的扩展才有用（如果有负权重，其他cost大的路径可能经过一个负权重边到达这个Node，使之前由cost最小原则在此node做过的扩展操作无用）
 
 ## examples
+[[LC407 Trapping Rain Water II]]
+[[LC1631 Path With Minimum Effort]]
+[[LC1102 Path With Maximum Minimum Value]]
+
 
 https://labuladong.gitee.io/algo

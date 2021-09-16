@@ -5,6 +5,10 @@
 - double floor (double a)//largest double value that less than or equal to the argument and is equal to a mathematical integer
 - double ceil (double a)// the smallest double value that is greater than or equal to the argument and is equal to a mathematical integer.
 
+# Geometry
+## Manhattan Distance
+where distance(p1, p2) = |p2.x - p1.x| + |p2.y - p1.y|
+
 # GCD/LCM
 GCD: Greatest Common Divisor def gcd(a, b)
 ```
@@ -50,6 +54,16 @@ if (p==0) update ret; //1/n chance
 
 rand7->rand10 int rand10() { while (true) { int num = (rand7() - 1) * 7 + rand7(); //1~49 if (num <= 40) return num % 10 + 1; } }
 
+## Random Shuffle
+```
+void RandomShuffle(int a[], int n){
+    for(int i=0; i<n; ++i){
+        int j = rand() % (n-i) + i;// 产生i到n-1间的随机数
+        Swap(a[i], a[j]);
+    }
+} // int rand = (int)(Math.random() * range) + min;
+```
+
 # Log
 ## 换底公式
 ```java
@@ -66,3 +80,5 @@ System.out.println(getRightMostUnsetBit(6));//0
 
 # other
 Quick switch 0<->1 : 1-a
+Any equation need be changed to better one.
+[[LC1499 Max Value of Equation]]

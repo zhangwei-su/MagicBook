@@ -26,3 +26,13 @@ def backtrack(路径, 选择列表):
 **前序遍历的代码在进入某一个节点之前的那个时间点执行，后序遍历代码在离开某个节点之后的那个时间点执行**
 
 符合回溯框架，而且时间复杂度都不可能低于 O(N!)，因为穷举整棵决策树是无法避免的。**这也是回溯算法的一个特点，不像动态规划存在重叠子问题可以优化，回溯算法就是纯暴力穷举，复杂度一般都很高**。
+
+# Tree
+## lowest common ancestor
+LCA
+- If guaranteed, post-order, return when node met, so may get the one 1st Node met OR the 1st common father
+- If NOT guaranteed, when got Only one node (1st met), dfs to ensure another one in subtree of 1st met.
+
+## Recursive in Recursive
+[[LC863 All Nodes Distance K in Binary Tree]]
+二叉树Recursive中，可以嵌套另一种Recursive

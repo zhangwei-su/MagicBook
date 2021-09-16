@@ -1,10 +1,12 @@
-# BFS
-[[BFS]]
-[[Dijkstra]]
 
+# Binary Search
+[[Binary Search]]
 
 # sliding window
 [[Sliding window]]
+
+# Recursive
+[[Recursive]]
 
 # Dynamic Programming
 
@@ -14,6 +16,10 @@
 [[Largest increase sequence]]
 
 [[Leetcode buy sell stocks]]
+
+# BFS
+[[BFS]]
+[[Dijkstra]]
 
 # Graph
 [[Graph]]

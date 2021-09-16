@@ -1,0 +1,1 @@
+<https://leetcode.com/discuss/interview-question/341247/facebook-leftmost-column-index-of-1>
