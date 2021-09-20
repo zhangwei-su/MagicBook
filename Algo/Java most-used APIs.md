@@ -54,6 +54,10 @@ Collections.max(list)
 ```java
 ArrayList<int[]>[] adj = new ArrayList[n]; //int[] is edge, [v,w]
 for (int i=0; i<n; i++) adj[i] = new ArrayList<>();
+for (int[] edge: edges) {
+	adj[edge[0]].add(new Edge(edge[1], edge[2]));
+	adj[edge[1]].add(new Edge(edge[0], edge[2]));
+}
 ```
 ## Arrays
 ```java

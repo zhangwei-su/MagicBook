@@ -33,7 +33,7 @@ combination(l, s) {
 ```
 
 # Permutation
-## backtrack
+## backtrack non-duplication
 ```
 for (int i = 0; i < num.size(); ++i) {
 	if (visited[i] == 1) continue;
@@ -45,11 +45,40 @@ for (int i = 0; i < num.size(); ++i) {
 }
 ```
 
-## swap
+## backtrack duplication allowed
+```
+Arrays.sort(nums)
+for (int i = 0; i < nums.size(); ++i) { //start with Zero
+  if (used[i]) continue;
+  // Same number can be only used once at each depth.
+  if (i > 0 && nums[i] == nums[i - 1] && !used[i - 1]) continue;
+  used[i] = 1;
+  cur.push_back(nums[i]);
+//used here, go with recursive call. so need clear after call
+ permuteDFS(nums, cur, used, ans); 
+  cur.pop_back();
+  used[i] = 0;
+}
+```
+## swap non-duplication
 ```
 for (int i = start; i < num.size(); ++i) {
 	swap(num[start], num[i]); //use local visit if dup
 	permuteDFS(num, start + 1, res);
 	swap(num[start], num[i]);
+}
+```
+
+## swap duplication allowed
+```
+Set visited;
+for (int i = start; i < nums.size(); ++i) { //start with start
+    //Not like above "used" solution, sort can NOT help on swap solution
+    //We have to use Set (or while-loop) to check dup
+    if(visited.contains(nums[i])) continue;
+    visited.add(nums[i])
+    swap(nums[start], nums[i]);
+    permuteDFS(nums, start + 1, res); //visited here, is local variable, only for skipping dup on current level.
+    swap(nums[start], num[i]);
 }
 ```
