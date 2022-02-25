@@ -43,8 +43,8 @@ for (i = k; stream != null; i++) {  
     if (p < k) reservoir[p] = stream[i];  
 return reservoir;
 ```
-[https://leetcode.com/discuss/interview-question/451431/Facebook-or-Onsite-or-Generate-random-max-index](https://leetcode.com/discuss/interview-question/451431/Facebook-or-Onsite-or-Generate-random-max-index)
 
+[[IV Generate-random-max-index]]
 ## Random func from existing API
 ```
 rand2->rand4: (rand2() - 1） * 2 + rand2() rand6->rand2: (rand6%2)+1 rand7->rand5 : const rand5 function rand5() { var result = 7; // arbitrarily large while (result > 5) { result = rand7(); } return result; } 398. Random Pick Index
