@@ -6,7 +6,7 @@
 - double ceil (double a)// the smallest double value that is greater than or equal to the argument and is equal to a mathematical integer.
 
 # Combination Permutation
-组合数计算（小于:res += right - left)
+组合数计算（递增累加和array？计算小于:res += right - left)
 
 组合数计算(等于：n!/m!(n-m)!)
 
@@ -18,9 +18,10 @@ where distance(p1, p2) = |p2.x - p1.x| + |p2.y - p1.y|
 GCD: Greatest Common Divisor def gcd(a, b)
 ```
 def gcd(a, b): 
-	while b != 0: t = a % b 
-	a = b 
-	b = t 
+	while b != 0: 
+		t = a % b 
+		a = b 
+		b = t 
 	return a
 ```
 LCM: Least Common Multiple
@@ -64,9 +65,9 @@ rand7->rand10 int rand10() { while (true) { int num = (rand7() - 1) * 7 + rand7(
 void RandomShuffle(int a[], int n){
     for(int i=0; i<n; ++i){
         int j = rand() % (n-i) + i;// 产生i到n-1间的随机数
-        Swap(a[i], a[j]);
+        Swap(a[i], a[j]); //i may equal to j
     }
-} // int rand = (int)(Math.random() * range) + min;
+} // int rand = (int)(Math.random() % range) + min;
 ```
 
 ## Random Pick
@@ -80,13 +81,14 @@ blacklist mapping
 ```java
 public static int getRightMostUnsetBit(int n){
         return (int)(Math.log(~n & (n+1))/Math.log(2)); 
-	//换底公式: 2^X=~n&(n+1) => X=log(~n&(n+1)) [2 base] = Math.log(~n & (n+1))/Math.log(2) [e base]
+	//~n&(n+1) is RightMostUnsetBit of n
+	//O(1) to get its offset: 换底公式: 2^X=~n&(n+1) => X=log(~n&(n+1)) [2 base] = Math.log(~n & (n+1))/Math.log(2) [e base]
 
 }
-System.out.println(getRightMostUnsetBit(1));//1
-System.out.println(getRightMostUnsetBit(3));//2
-System.out.println(getRightMostUnsetBit(7));//3
-System.out.println(getRightMostUnsetBit(6));//0
+System.out.println(getRightMostUnsetBit(1));//1b->1
+System.out.println(getRightMostUnsetBit(3));//11b->2
+System.out.println(getRightMostUnsetBit(7));//111b->3
+System.out.println(getRightMostUnsetBit(6));//110b->0
 ```
 
 # other

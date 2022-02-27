@@ -15,7 +15,7 @@ MinHeap/TreeMap<sum, index>{0,-1}
 ### Non-Negative Only
 
 ### Iterate Prefix sum array
-累加和数组上的最值扫描curMax = min(curMin + num, num);]
+negative allowed Array->累加和数组上的最值扫描curMax = min(curMin + num, num);]
 None-negative Array->累加和+二分搜索(sorted)/双指针
 
 ### Negative allowed
@@ -35,8 +35,8 @@ sum = (sum + A[i]%K + K) % K
 ### using Bit Manipulation
 [[LC1371 Find the Longest Substring Containing Vowels in Even Counts]]
 [[LC1915 Number of Wonderful Substrings]]
-Whether counter is Odd or Even , can be recorded with Bit Manipulation
-Diffs b/w Even and Even or b/w Odd and Odd are Even, so if bitMap same, diff is even
+Whether counter is Odd or Even , can be recorded with Bit Manipulation(one or Zero)
+Diffs b/w Even and Even or b/w Odd and Odd, are Even, so if bitMap same, diff is even
 Diffs b/w Odd and Even are Odd, so if bitMap mutually exclusive, diff is Odd
 
 ## Sliding window
